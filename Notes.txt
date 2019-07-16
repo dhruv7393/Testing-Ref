@@ -1,0 +1,4 @@
+debug() returns the inner content as string
+simulate('click') is used for button click
+state("key") is used to get particlar value for key
+wrapper.setState() can be used to modify the current state
