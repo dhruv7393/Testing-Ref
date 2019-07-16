@@ -9,7 +9,30 @@ const GuessedWords = props => {
       </div>
     );
   }
-  return <div />;
+  return (
+    <div data-test="component-guessword">
+      <div data-test="component-guessWordsDiv">
+        <table>
+          <thead>
+            <tr>
+              <th>Guessed</th>
+              <th>Matching Letters</th>
+            </tr>
+          </thead>
+          <tbody>
+            {props.guessedWords.map(guessedWording => {
+              return (
+                <tr key={guessedWording.gussedWord} data-test="guess-word">
+                  <td>{guessedWording.gussedWord}</td>
+                  <td>{guessedWording.letterMatchCount}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 };
 
 GuessedWords.propTypes = {

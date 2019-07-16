@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./counter/counter";
+// import Counter from "./counter/counter";
+import Jotto from "./Jotto/index";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         </a>
       </header>
       ----------------------------------
-      <Counter />
+      <Jotto />
     </div>
   );
 }
