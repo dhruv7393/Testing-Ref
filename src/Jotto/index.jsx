@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import Congrats from "./congrats";
 import GuessedWords from "./GuessedWords";
 
@@ -7,7 +8,7 @@ class Jotto extends Component {
   render() {
     return (
       <div className="jotto">
-        <Congrats success={false} />
+        <Congrats success={this.props.success} />
         <GuessedWords
           guessedWords={[
             { gussedWord: "train", letterMatchCount: 3 },
@@ -20,4 +21,8 @@ class Jotto extends Component {
   }
 }
 
-export default Jotto;
+const mapStateToProps = state => ({
+  success: state.succesReducer.success
+});
+
+export default connect(mapStateToProps)(Jotto);
