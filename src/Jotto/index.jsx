@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Congrats from "./congrats";
 import GuessedWords from "./GuessedWords";
+import Input from "./Input";
 
 class Jotto extends Component {
   state = {};
@@ -9,6 +10,7 @@ class Jotto extends Component {
     return (
       <div className="jotto">
         <Congrats success={this.props.success} />
+        <Input />
         <GuessedWords
           guessedWords={[
             { gussedWord: "train", letterMatchCount: 3 },
