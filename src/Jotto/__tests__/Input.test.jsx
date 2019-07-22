@@ -46,3 +46,12 @@ describe("word has been guessed", () => {
     expect(container.length).toBe(0);
   });
 });
+
+describe("redux-props", () => {
+  test("has success piece of state as prop", () => {
+    const success = true;
+    const wrapper = setup({ successReducer: { success: true } });
+    const successProp = wrapper.instance().props.success;
+    expect(successProp).toBe(success);
+  });
+});

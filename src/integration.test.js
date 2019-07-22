@@ -73,19 +73,9 @@ describe("guess word action creator", () => {
     });
     test("updates state successfully for correct guess", () => {
       store.dispatch(guessedWordAction(secretWord));
-      const expectedState = {
-        secretWord,
-        successReducer: { success: true },
-        guessedWords: [
-          ...guessedWords,
-          {
-            guessedWord: secretWord,
-            letterMatchCount: 5
-          }
-        ]
-      };
+      const expectedState = "party";
       const newState = store.getState();
-      expect(newState).toEqual(expectedState);
+      expect(newState.secretWord).toEqual(expectedState);
     });
   });
 });
