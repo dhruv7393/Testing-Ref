@@ -31,7 +31,7 @@ describe("word has not been guessed", () => {
 });
 
 describe("word has been guessed", () => {
-  const initialState = { succesReducer: { success: true } };
+  const initialState = { successReducer: { success: true } };
   const wrapper = setup(initialState);
   test("renders component without error", () => {
     const container = findByTestAttr(wrapper, "success-true");
